@@ -5,6 +5,7 @@ const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 const MONGODB = require("./database/database.js")
 const userRouter = require("./routes/userRoutes")
+const postRouter = require("./routes/postRoutes")
 
 const app = express()
 
@@ -22,8 +23,9 @@ app.get("/", (req, res) => {
     res.send("Hello")
 })
 
-app.use("/users", userRouter)
 // http://localhost:5000/users/register
+app.use("/users", userRouter)
+app.use("/post", postRouter)
 
 
 
