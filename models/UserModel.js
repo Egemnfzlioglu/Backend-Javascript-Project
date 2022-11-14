@@ -13,10 +13,6 @@ const UserSchema = mongoose.Schema({
         type: String,
         require: false,
     },
-    googleId: {
-        type: String,
-        require: false,
-    },
     id: {
         type: String,
         require: false,

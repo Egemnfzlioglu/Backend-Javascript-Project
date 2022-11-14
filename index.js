@@ -30,19 +30,6 @@ app.use("/post", postRouter)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // SafeArea ===============================================================
 
 const PORT = 5000 || process.env.PORT

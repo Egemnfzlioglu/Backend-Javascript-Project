@@ -4,12 +4,15 @@ const router = express.Router()
 
 const { createPost, getPostAll } = require("../controllers/postController")
 
-
+const auth = require("../middleware/authMiddleware")
 
 
 router.get("/", getPostAll)
 
-router.post("/", createPost)
+
+router.post("/",
+    auth,
+    createPost)
 
 
 

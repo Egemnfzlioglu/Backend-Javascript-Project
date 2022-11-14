@@ -6,11 +6,11 @@ const secretKey = "Egemen"
 
 
 
+
 // SafeArea ===============================================================
 
 const login = async (req, res) => {
     const { email, password } = req.body
-
     try {
         const oldUser = await UserModel.findOne({ email })
 
